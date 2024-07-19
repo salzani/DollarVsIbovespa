@@ -6,7 +6,6 @@ import mplcyberpunk
 
 
 plt.style.use("cyberpunk")
-mplcyberpunk.add_glow_effects()
 
 
 fig, ax1 = plt.subplots(figsize=(12, 6))
@@ -32,6 +31,9 @@ ax1.tick_params(axis='x', rotation=45)
 
 ax1.legend(loc='upper left', bbox_to_anchor=(0.1, 1.1))
 ax2.legend(loc='upper right', bbox_to_anchor=(0.1, 1.1))
+
+mplcyberpunk.add_glow_effects(ax1)
+mplcyberpunk.add_glow_effects(ax2)
 
 
 plt.show()
