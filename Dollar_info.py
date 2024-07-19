@@ -1,8 +1,15 @@
 import yfinance as yf
 import pandas as pd
+from datetime import datetime, timedelta
 
 ticker = 'BRL=X'
 
-dollarData = yf.download(ticker, start='2023-01-01', end='2024-01-01', interval='1mo')
+finalDateDollar = datetime.today()
+initialDateDollar = finalDateDollar - timedelta(days=365*15)
 
-data2023 = dollarData.loc['2023-01-01':'2023-12-31']
+dataDollar = yf.download(ticker,
+                         start=initialDateDollar,
+                         end=finalDateDollar,
+                         interval= '1mo')[
+                            'Adj Close'
+                         ]

@@ -1,8 +1,16 @@
 import yfinance as yf
 import pandas as pd
 
+from datetime import timedelta, datetime
+
 ticker = '^BVSP'
 
-data = yf.download(ticker, start='2023-01-01', end='2024-01-01', interval='1mo')
+finalDate = datetime.today()
+initialDate = finalDate - timedelta(days=365*15)
 
-ibovespaData = data.loc['2023-01-01':'2023-12-31']
+data = yf.download(ticker,
+                   start=initialDate,
+                   end=finalDate,
+                   interval='1mo')[
+                        'Adj Close'
+                    ]
