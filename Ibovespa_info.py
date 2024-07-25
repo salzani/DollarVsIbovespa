@@ -6,7 +6,7 @@ from datetime import timedelta, datetime
 ticker = '^BVSP'
 
 finalDate = datetime.today()
-initialDate = finalDate - timedelta(days=365*15)
+initialDate = finalDate - timedelta(days=365*11)
 
 data = yf.download(ticker,
                    start=initialDate,
