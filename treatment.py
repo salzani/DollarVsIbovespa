@@ -47,5 +47,4 @@ plt.grid(False)
 
 mplcyberpunk.add_glow_effects(ax1)
 mplcyberpunk.add_glow_effects(ax2)
-
 plt.show()
