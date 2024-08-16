@@ -1,0 +1,4 @@
+yfinance
+datetime
+matplotlib
+mplcyberpunk
